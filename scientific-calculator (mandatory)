@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+// Function declarations
+void BasicOperation(int choice);
+void TrigonometricOperation(int choice);
+double AlgebraicOperation(int choice, double num1, double num2);
+double LogarithmicOperation(int choice, double number, double base);
+
+int main() {
+    int choice;
+    double num1, num2, result;
+
+    while (1) {
+        // Display menu for the combined calculator
+        printf("\n Scientific Calculator Menu:\n");
+        printf("\nBasic Operations:\n");
+        printf("1. Addition\n");
+        printf("2. Subtraction\n");
+        printf("3. Multiplication\n");
+        printf("4. Division\n");
+
+        printf("\nTrigonometric Operations:\n");
+        printf("5. Sine\n");
+        printf("6. Cosine\n");
+        printf("7. Tangent\n");
+        printf("8. Arcsine\n");
+        printf("9. Arccosine\n");
+        printf("10. Arctangent\n");
+
+        
