@@ -83,5 +83,131 @@ printf("\nAlgebraic Operations:\n");
 
     return 0;
 }
+void BasicOperation(int choice) {
+    double n1, n2;
+    printf("Enter the first number: ");
+    scanf("%lf", &n1);
+    printf("Enter the second number: ");
+    scanf("%lf", &n2);
 
+    switch (choice) {
+        case 1:
+            printf("Addition of %.2lf and %.2lf is: %.2lf\n", n1, n2, n1 + n2);
+            break;
+        case 2:
+            printf("Subtraction of %.2lf and %.2lf is: %.2lf\n", n1, n2, n1 - n2);
+            break;
+        case 3:
+            printf("Multiplication of %.2lf and %.2lf is: %.2lf\n", n1, n2, n1 * n2);
+            break;
+        case 4:
+            if (n2 != 0) {
+                printf("Division of %.2lf and %.2lf is: %.2lf\n", n1, n2, n1 / n2);
+            } else {
+                printf("Error: Division by zero.\n");
+            }
+            break;
+    }
+}
+
+void TrigonometricOperation(int choice) {
+    double angle, result;
+
+    printf("Enter the angle in degrees: ");
+    scanf("%lf", &angle);
+
+    double radianAngle = angle * M_PI / 180.0;
+
+    switch (choice) {
+        case 5:
+            result = sin(radianAngle);
+            printf("Sine of %.2lf degrees is %.4lf\n", angle, result);
+            break;
+        case 6:
+            result = cos(radianAngle);
+            printf("Cosine of %.2lf degrees is %.4lf\n", angle, result);
+            break;
+        case 7:
+            result = tan(radianAngle);
+            printf("Tangent of %.2lf degrees is %.4lf\n", angle, result);
+            break;
+        case 8:
+            result = asin(sin(radianAngle)) * 180.0 / M_PI;
+            printf("Arcsine of %.2lf degrees is %.4lf\n", angle, result);
+            break;
+        case 9:
+            result = acos(cos(radianAngle)) * 180.0 / M_PI;
+            printf("Arccosine of %.2lf degrees is %.4lf\n", angle, result);
+            break;
+        case 10:
+            result = atan(tan(radianAngle)) * 180.0 / M_PI;
+            printf("Arctangent of %.2lf degrees is %.4lf\n", angle,
+            result);
+            break;
+    }
+}
+
+double AlgebraicOperation(int choice, double num1, double num2) {
+    double result;
+
+    switch (choice) {
+        case 11:
+            printf("Enter the base: ");
+            scanf("%lf", &num1);
+            printf("Enter the exponent: ");
+            scanf("%lf", &num2);
+            result = pow(num1, num2);
+            break;
+        case 12:
+            printf("Enter the number: ");
+            scanf("%lf", &num1);
+            result = (num1 >= 0) ? sqrt(num1) : NAN;
+            break;
+        case 13:
+            printf("Enter the number: ");
+            scanf("%lf", &num1);
+            result = cbrt(num1);
+            break;
+        case 14:
+            printf("Enter the base: ");
+            scanf("%lf", &num1);
+            printf("Enter the root (n): ");
+            scanf("%lf", &num2);
+            result = (num1 >= 0 || (num2 == 2 && num1 < 0)) ? pow(num1, 1 / num2) : NAN;
+            break;
+        case 15:
+            printf("Enter the number: ");
+            scanf("%lf", &num1);
+            result = (num1 < 0) ? NAN : tgamma(num1 + 1);
+            break;
+        case 16:
+            printf("Enter the number: ");
+            scanf("%lf", &num1);
+            result = fabs(num1);
+            break;
+        default:
+            result = NAN; }
+            
+            return result;
+}
+
+double LogarithmicOperation(int choice, double number, double base) {
+    double result;
+
+    switch (choice) {
+        case 17:
+            result = log10(number);
+            break;
+        case 18:
+            result = log(number);
+            break;
+        case 19:
+            result = (base > 0 && base != 1 && number > 0) ? log(number) / log(base) : NAN;
+            break;
+        default:
+            result = NAN;
+    }
+
+    return result;
+}
         
