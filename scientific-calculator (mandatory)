@@ -28,4 +28,60 @@ int main() {
         printf("9. Arccosine\n");
         printf("10. Arctangent\n");
 
+printf("\nAlgebraic Operations:\n");
+        printf("11. Exponentiation\n");
+        printf("12. Square Root\n");
+        printf("13. Cube Root\n");
+        printf("14. nth Root\n");
+        printf("15. Factorial\n");
+        printf("16. Absolute Value\n");
+
+        printf("\nLogarithmic Operations:\n");
+        printf("17. Logarithm (base 10)\n");
+        printf("18. Natural Logarithm (base e)\n");
+        printf("19. Custom Base Logarithm\n");
+        printf("\n0. Exit\n");
+
+        printf("\nEnter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 0) {
+            printf("Exiting the calculator. Goodbye!\n");
+            break;
+        }
+
+        if (choice >= 1 && choice <= 4) {
+            // For basic arithmetic operations
+            BasicOperation(choice);
+        } else if (choice >= 5 && choice <= 10) {
+            // For trigonometric operations
+            TrigonometricOperation(choice);
+        } else if (choice >= 11 && choice <= 16) {
+            // For Algebraic operations
+            printf("Enter the first number: ");
+            scanf("%lf", &num1);
+            printf("Enter the second number: ");
+            scanf("%lf", &num2);
+            result = AlgebraicOperation(choice, num1, num2);
+            printf("Result: %.4lf\n", result);
+        } else if (choice >= 17 && choice <= 19) {
+            // For Logarithmic operations
+            double number, base;
+            printf("Enter a number: ");
+            scanf("%lf", &number);
+            if (choice == 19) {
+                printf("Enter the base: ");
+                scanf("%lf", &base);
+            }
+            result = LogarithmicOperation(choice, number, base);
+            printf("Result: %.4lf\n", result);
+        } else {
+            printf("Invalid choice. Please enter a number between 0 and 19.\n");
+            continue;
+        }
+    }
+
+    return 0;
+}
+
         
