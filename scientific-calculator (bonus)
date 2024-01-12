@@ -15,5 +15,109 @@ unsigned long long factorial(int n);
 // Bonus Feature Function Prototypes
 // ... (additional functions for bonus features)
 
+int main() {
+    int choice;
+    int n;
+
+    int matrix1[10][10], matrix2[10][10], result[10][10], rows1, cols1, rows2, cols2;
+
+    float data[10];
+
+    do {
+        printf("\nMain Menu\n");
+        printf("1. Matrix Operations\n");
+        printf("2. Statistical Operations\n");
+        printf("3. Bonus Features\n");
+        printf("0. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                // Matrix Operations Menu
+                // ... (unchanged)
+                break;
+
+            case 2:
+                // Statistical Operations Menu
+                // ... (unchanged)
+                break;
+
+            case 3:
+                // Bonus Features Menu
+                do {
+                    printf("\nBonus Features Menu:\n");
+                    printf("A. Modulus (remainder)\n");
+                    printf("B. Percentage calculation\n");
+                    printf("C. Greatest Common Divisor (GCD)\n");
+                    printf("D. Least Common Multiple (LCM)\n");
+                    printf("E. Floor (round down)\n");
+                    printf("F. Ceiling (round up)\n");
+                    printf("G. Complex Number Operations\n");
+                    printf("H. Matrix Operations\n");
+                    printf("I. Binary Operations\n");
+                    printf("J. Engineering Operations\n");
+                    printf("K. Calculus Operations\n");
+                    printf("0. Back to Main Menu\n");
+                    printf("Enter your choice: ");
+                    scanf("%d", &choice);
+
+                    switch (choice) {
+                        case 'A':
+                            // Implement Modulus (remainder) function
+                            break;
+                        case 'B':
+                            // Implement Percentage calculation function
+                            break;
+                        case 'C':
+                            // Implement Greatest Common Divisor (GCD) function
+                            break;
+                        case 'D':
+                            // Implement Least Common Multiple (LCM) function
+                            break;
+                        case 'E':
+                            // Implement Floor (round down) function
+                            break;
+                        case 'F':
+                            // Implement Ceiling (round up) function
+                            break;
+                        case 'G':
+                            // Implement Complex Number Operations
+                            break;
+                        case 'H':
+                            // Implement Matrix Operations (bonus)
+                            break;
+                        case 'I':
+                            // Implement Binary Operations (bonus)
+                            break;
+                        case 'J':
+                            // Implement Engineering Operations (bonus)
+                            break;
+                        case 'K':
+                            // Implement Calculus Operations (bonus)
+                            break;
+                        case 0:
+                            printf("Returning to the Main Menu\n");
+                            break;
+                        default:
+                            printf("Invalid choice\n");
+                            break;
+                    }
+                } while (choice != 0);
+                break;
+
+            case 0:
+                printf("Exiting the program\n");
+                break;
+
+            default:
+                printf("Invalid choice\n");
+                break;
+        }
+    } while (choice != 0);
+
+    return 0;
+}
+
 
     
