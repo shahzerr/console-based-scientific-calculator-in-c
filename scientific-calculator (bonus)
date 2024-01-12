@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+
+// Matrix Function Prototypes
+// ... (existing matrix functions remain unchanged)
+
+// Statistical Function Prototypes
+float mean(float data[], int n);
+float median(float data[], int n);
+float mode(float data[], int n);
+float standardDeviation(float data[], int n);
+float variance(float data[], int n);
+unsigned long long factorial(int n);
+
+// Bonus Feature Function Prototypes
+// ... (additional functions for bonus features)
+
+
+    
